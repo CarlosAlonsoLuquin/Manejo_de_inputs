@@ -1,0 +1,209 @@
+.cardContainer {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.placeholderCard {
+  text-align: center;
+  padding: 3.5rem 1.75rem;
+  color: var(--text-muted);
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.placeholderIcon {
+  font-size: 3.25rem;
+  display: block;
+  margin-bottom: 0.85rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.04));
+}
+
+.placeholderCard p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.75rem;
+  color: var(--text-muted);
+  gap: 1.25rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.spinner {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 3px solid var(--border-subtle);
+  border-top-color: var(--primary-500);
+  border-radius: 50%;
+  animation: spin 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.userHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.35rem;
+}
+
+.userAvatar {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-full);
+  border: 3px solid #ffffff;
+  outline: 2px solid var(--primary-100);
+  object-fit: cover;
+  box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.15);
+}
+
+.userName {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+}
+
+.userLogin {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary-600);
+  margin: 0;
+}
+
+.bio {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.extraDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.detailRow a {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.detailRow a:hover {
+  text-decoration: underline;
+  color: var(--primary-700);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.statBox {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.statBox:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.statValue {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.profileLinkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--text-main);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.15);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.profileLinkButton:hover {
+  background-color: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px 0 rgba(15, 23, 42, 0.22);
+}
+
+.profileLinkButton:active {
+  transform: scale(0.98);
+}
+
+.errorBox {
+  background-color: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
